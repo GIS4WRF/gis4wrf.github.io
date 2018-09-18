@@ -23,16 +23,30 @@ Download the latest version of **QGIS macOS Installer** from the [QGIS download 
 ### Ubuntu
 The installation of QGIS on Ubuntu is slightly different depending on your version of Ubuntu. If you are running a version prior to Ubuntu 17.x, you must upgrade to the most recent version. If do not know what version of Ubuntu you are running, run `lsb_release -a | grep Release` in your Terminal prompt.
 
+For both versions you will need to import the GPG key for QGIS 3 before you can install QGIS 3.
+
+Import the GPG key for QGIS 3 with the following command:
+
+```bash
+wget -O - https://qgis.org/downloads/qgis-2017.gpg.key | gpg --import
+```
+
+Add the GPG key of QGIS 3 to apt package manager:
+
+``` bash
+gpg --export --armor CAEB3DC3BDF7FB45 | sudo apt-key add -
+```
+
 #### 17.x (Artful)
 
 Copy, paste and execute the following in your Terminal prompt:
 
 ```bash
 sudo apt-get install -y software-properties-common &&
+sudo add-apt-repository 'deb https://qgis.org/debian artful main' &&
 sudo add-apt-repository -s 'deb https://qgis.org/debian artful main' &&
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key CAEB3DC3BDF7FB45 &&
 sudo apt-get update &&
-sudo apt-get install -y qgis python-qgis gfortran &&
+sudo apt-get install -y qgis python-qgis gfortran mpich &&
 sudo apt-get install -y python3-pyqt5.qtwebkit &&
 sudo apt-get install -y python3-pip &&
 pip3 install --user f90nml pyyaml netCDF4 wrf-python
@@ -46,10 +60,10 @@ Copy, paste and execute the following in your Terminal prompt:
 
 ```bash
 sudo apt-get install -y software-properties-common &&
+sudo add-apt-repository 'deb https://qgis.org/debian bionic main' &&
 sudo add-apt-repository -s 'deb https://qgis.org/debian bionic main' &&
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key CAEB3DC3BDF7FB45 &&
 sudo apt-get update &&
-sudo apt-get install -y qgis python-qgis gfortran &&
+sudo apt-get install -y qgis python-qgis gfortran mpich &&
 sudo apt-get install -y python3-pyqt5.qtwebkit &&
 sudo apt-get install -y python3-pip &&
 pip3 install --user f90nml pyyaml netCDF4 wrf-python
