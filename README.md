@@ -1,5 +1,6 @@
-## Welcome to the GIS4WRF website development repository
+[![Build Status](https://travis-ci.com/GIS4WRF/gis4wrf.github.io.svg?branch=develop)](https://travis-ci.com/GIS4WRF/gis4wrf.github.io)
 
+## Welcome to the GIS4WRF website development repository
 For the most up-top-date documentation and tutorials, please see the official GIS4WRF website at https://gis4wrf.github.io/.
 
 ## Contributing
