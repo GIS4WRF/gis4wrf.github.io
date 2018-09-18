@@ -1,0 +1,48 @@
+# Project information
+site_name: 'GIS4WRF'
+site_description: 'Toolkit for pre- and post-processing, visualizing, and running simulations in WRF'
+site_author: 'D. Meyer and M. Riechert'
+site_url: 'https://gis4wrf.github.io'
+
+# Repository
+repo_name: 'gis4wrf/gis4wrf'
+repo_url: 'https://github.com/gis4wrf/gis4wrf'
+edit_uri:  '' # disable 'Edit this page' option (https://www.mkdocs.org/user-guide/configuration/#edit_uri)
+
+# Copyright
+copyright: 'Copyright 2018 D. Meyer and M. Riechert'
+
+# Configuration
+theme:
+  name: 'material'
+  language: 'en'
+  palette:
+    primary: 'white'
+    accent: 'indigo'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+  favicon: 'assets/images/gis4wrf_logo.png'
+  logo: 'assets/images/gis4wrf_logo.png'
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+  - footnotes
+  - pymdownx.mark
+  - pymdownx.details
+  - pymdownx.superfences
+
+# Page tree
+nav:
+  - Home: index.md
+  - Installation: installation/index.md
+  - Configuration: configuration/index.md
+  - Documentation: documentation/index.md
+  - Tutorials: tutorials/index.md
+  - How to cite: cite/index.md
+  - Copyright and license: license/index.md

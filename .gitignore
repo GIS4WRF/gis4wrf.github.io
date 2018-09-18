@@ -1,0 +1,6 @@
+# Global
+build/
+site/
+
+# macOS
+.DS_Store

@@ -1,0 +1,19 @@
+language: python
+python: "3.6"
+
+install:
+  - pip install -U mkdocs-material
+
+script:
+  - mkdocs build
+  - mv README.md site/README.md
+  - mv LICENSE.txt site/LICENSE.txt
+
+deploy:
+ provider: pages
+ skip_cleanup: true
+ github_token: $GITHUB_TOKEN
+ local_dir: site
+ target-branch: master
+ on:
+   all_branches: true
