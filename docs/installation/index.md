@@ -35,7 +35,6 @@ gpg --export --armor CAEB3DC3BDF7FB45 | sudo apt-key add - &&
 sudo add-apt-repository -s 'deb https://qgis.org/debian artful main' &&
 sudo apt-get update &&
 sudo apt-get install -y qgis python-qgis gfortran mpich &&
-sudo apt-get install -y python3-pyqt5.qtwebkit &&
 sudo apt-get install -y python3-pip &&
 pip3 install --user f90nml pyyaml netCDF4 wrf-python
 ```
@@ -54,7 +53,6 @@ gpg --export --armor CAEB3DC3BDF7FB45 | sudo apt-key add - &&
 sudo add-apt-repository -s 'deb https://qgis.org/debian bionic main' &&
 sudo apt-get update &&
 sudo apt-get install -y qgis python-qgis gfortran mpich &&
-sudo apt-get install -y python3-pyqt5.qtwebkit &&
 sudo apt-get install -y python3-pip &&
 pip3 install --user f90nml pyyaml netCDF4 wrf-python
 ```
