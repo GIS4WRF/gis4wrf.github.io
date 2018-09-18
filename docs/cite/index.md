@@ -11,25 +11,26 @@ We kindly ask to please acknowledge our work by citing and referencing both the 
 ### For the reference list
 
 !!! example "Adapt using your referencing style from the example below"
-    Meyer, D., and M. Riechert 2018a. GIS4WRF: an integrated open source QGIS toolkit
-            for the Advanced Research WRF Framework. Manuscript submitted for publication.
+    Meyer, D., and M. Riechert, 2018a: GIS4WRF: an integrated open source QGIS toolkit
+        for the Advanced Research WRF Framework. Manuscript submitted for publication.
 
-    Meyer, D., and M. Riechert, 2018b. GIS4WRF.
-            doi:10.5281/zenodo.1288569.
+    Meyer, D., and M. Riechert, 2018b: The GIS4WRF Plugin.
+        doi:10.5281/zenodo.1288569.
 
 ### BibTex
 
 ```bibtex
-@article{meyerandriechert2018a,
-  title={GIS4WRF: an integrated open source QGIS toolkit for the Advanced Research WRF Framework},
-  author={D. Meyer and M. Riechert},
-  journal={Manuscript submitted for publication},
-  year={2018}
-}
+    @unpublished{meyer_riechert_2018_article,
+        author       = {D. Meyer and M. Riechert},
+        title={GIS4WRF: an integrated open source QGIS toolkit for the Advanced Research WRF Framework},
+        note={Manuscript submitted for publication}
+    }
 
-@software{meyerandriechert2018b,
-  title = {The GIS4WRF Plug-in},
-  author={D. Meyer and M. Riechert},
-  url = {https://www.github.com/gis4wrf/gis4wrf},
-}
+    @misc{meyer_riechert_2018_software,
+        author       = {D. Meyer and M. Riechert},
+        title        = {The GIS4WRF Plugin},
+        year         = 2018,
+        doi          = {10.5281/zenodo.1288569},
+        url          = {https://doi.org/10.5281/zenodo.1288569}
+    }
 ```
