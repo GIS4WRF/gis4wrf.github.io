@@ -18,7 +18,17 @@ We currently support the following operating systems (OS) and versions:
 Download the latest version of **QGIS Standalone Installer** from the [QGIS download page](https://www.qgis.org/en/site/forusers/download#windows) and install it using the guided installation. After you have successfully installed QGIS 3, go to [Install GIS4WRF](#install-gis4wrf).
 
 ### macOS
-Download the latest version of **QGIS macOS Installer** from the [QGIS download page](https://qgis.org/en/site/forusers/download.html#mac), open it, and follow the instructions contained in the `readme` file. After you have successfully installed QGIS 3, go to [Install GIS4WRF](#install-gis4wrf).
+
+You need to have [Homebrew](https://brew.sh/) installed on your system. Then, simply copy, paste and execute the following in your Terminal prompt:
+
+```bash
+brew tap osgeo/osgeo4mac &&
+brew install qgis3 && brew install qgis3 && # avoid issues with current formula
+brew install gcc mpich python hdf5 netcdf &&
+pip3 install --user f90nml pyyaml netCDF4 wrf-python
+```
+
+You can now launch QGIS 3 from your Terminal prompt with the `qgis3` command. To install GIS4WRF, go to [Install GIS4WRF](#install-gis4wrf).
 
 ### Ubuntu
 The installation of QGIS on Ubuntu is slightly different depending on your version of Ubuntu. If you are running a version prior to Ubuntu 17.x, you must upgrade to the most recent version. If do not know what version of Ubuntu you are running, run `lsb_release -a | grep Release` in your Terminal prompt.

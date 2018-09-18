@@ -97,8 +97,8 @@ To download the meteorological data navigate to `Dataset` > `Met` and select:
 
 - Dataset: `ds083.3`
 - Product: `Analysis`
-- Start: `15/07/2018 12:00`
-- End: `15/07/2018 18:00`
+- Start: `15/07/2018 12:00` (for US datetime format: `7/15/18 12:00 PM`)
+- End: `15/07/2018 18:00`   (for US datetime format: `7/15/18 06:00 PM`)
 
 Under `Extent` click on subset, then select `Domain 2` on the `Layers` panel (2) and click on `Set from Active Layer` (3) to subset your request. Finally, click `Download` to submit and download your request. Once the download is complete go to [Select input data](#select-input-data).
 
