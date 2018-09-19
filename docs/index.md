@@ -11,7 +11,7 @@ GIS4WRF is a free and open source QGIS plug-in to help researchers and practitio
 
 ## Quick start
 
-If you are familiar with [QGIS](https://qgis.org/) and have installed the latest version of **QGIS 3** on your system, you can find and install GIS4WRF from the `Plugins` > `Manage and Install Plugins...` menu. If you are new to QGIS or GIS4WRF, please see the [installation page](../installation). If you want to know how to download pre-built binaries for WPS and WRF so that you can run simulations on Windows, macOS and Linux, see the [Configuration](../configuration) section. To learn how to use GIS4WRF see the [Documentation](../documentation) or [Tutorials](../tutorials) sections.
+If you are familiar with [QGIS](https://qgis.org/) and have installed the latest version of **QGIS 3** on Windows, you can find and install GIS4WRF from the `Plugins` > `Manage and Install Plugins...` menu. On macOS and Linux, or if you are new to QGIS or GIS4WRF, please see the [installation page](../installation). If you want to know how to download pre-built binaries for WPS and WRF so that you can run simulations on Windows, macOS and Linux, see the [Configuration](../configuration) section. To learn how to use GIS4WRF see the [Documentation](../documentation) or [Tutorials](../tutorials) sections.
 
 ![Install GIS4WRF](assets/images/gis4wrf-installation.gif)
 
