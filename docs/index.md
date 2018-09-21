@@ -7,6 +7,10 @@ GIS4WRF is a free and open source QGIS plug-in to help researchers and practitio
 !!! info "Pre-built binaries with WRF-CMake"
     Did you know that we provide pre-built binaries for Windows, macOS and Linux through [WRF-CMake](https://github.com/WRF-CMake) ([@Riechert and Meyer 2018])? To know how to download and use them in GIS4WRF see the [Documentation](documentation) section. If you are looking to download the pre-built WPS/WRF programs separately go to [https://github.com/WRF-CMake](https://github.com/WRF-CMake).
 
+!!! warning "Upgrade WPS and WRF pre-built binaries to v4"
+    If you had previously downloaded our pre-built binaries, please make sure to upgrade to the latest version (v4). For more information, see [here](configuration/#integration-with-wpswrf).
+
+
 ![GIS4WRF Demo](assets/images/gis4wrf-demo.gif)
 
 ## Quick start
