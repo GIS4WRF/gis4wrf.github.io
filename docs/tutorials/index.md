@@ -11,7 +11,7 @@ In this example tutorial we show how to use GIS4WRF to easily and quickly downlo
 
 !!! warning "Checklist before you begin"
     - [x] You have followed our instructions to [install](../installation) and [configure](../configuration) GIS4WRF.
-    - [x] You have enabled the [integration with WPS/WRF](../configuration/#integration-with-wpswrf) and downloaded the pre-build binaries.
+    - [x] You have enabled the [integration with WPS/WRF](../configuration/#integration-with-wpswrf) and downloaded the **latest (v4)** pre-build binaries.
     - [x] You have enabled the [integration with NCAR's Research Data Archive](../configuration/#integration-with-ncars-research-data-archive).
 
 
