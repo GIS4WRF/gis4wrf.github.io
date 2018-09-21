@@ -25,7 +25,7 @@ Make sure that you have enough space and have set the correct permissions for th
 If you are looking to use GIS4WRF to run the WPS and WRF programs, you can either set the path to the WPS and WRF folder on your system or, alternatively, ==we support pre-compiled WPS and WRF binaries for Windows, macOS and Linux== (recommended for most cases and new users).
 
 !!! warning "Using WPS/WRF with MPI Support"
-    We recommend to download pre-built binaries with MPI support (`dmpar`). Note that you need to have MPI installed on your system ***before*** downloading the pre-built binaries.
+    We recommend to download pre-built binaries with MPI support (`dmpar`). Note that you need to have MPI installed on your system ***before*** downloading the pre-built binaries. You need to have administrative privileges.
 
     - On Windows, download and install Microsoft MPI (`msmpisetup.exe`) from [https://www.microsoft.com/en-us/download/details.aspx?id=56727](https://www.microsoft.com/en-us/download/details.aspx?id=56727).
     - On macOS you can get it though [Homebrew](https://brew.sh/) using `brew update && brew install mpich`
