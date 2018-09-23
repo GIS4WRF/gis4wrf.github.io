@@ -6,7 +6,7 @@ site_url: 'https://gis4wrf.github.io'
 
 # Repository
 repo_name: 'gis4wrf/gis4wrf'
-repo_url: 'https://github.com/gis4wrf/gis4wrf'
+repo_url: 'https://github.com/GIS4WRF/gis4wrf'
 edit_uri:  '' # disable 'Edit this page' option (https://www.mkdocs.org/user-guide/configuration/#edit_uri)
 
 # Copyright
