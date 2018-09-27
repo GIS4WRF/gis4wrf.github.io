@@ -1,4 +1,4 @@
-The installation of GIS4WRF requires **QGIS 3**. Make sure that you follow the same steps in the same order as described below to avoid problems.
+The installation of GIS4WRF requires the **latest version** of **QGIS 3**. Make sure that you follow the same steps in the same order as described below to avoid problems.
 
 !!! tip
     For best user-experience and easiest installation, install on Windows.
