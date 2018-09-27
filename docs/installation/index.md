@@ -15,7 +15,7 @@ We currently support the following operating systems (OS) and versions:
 ## Install QGIS
 
 ### Windows
-Download the latest version of **QGIS Standalone Installer** from the [QGIS download page](https://www.qgis.org/en/site/forusers/download#windows) and install it using the guided installation. After you have successfully installed QGIS 3, go to [Install GIS4WRF](#install-gis4wrf).
+Download the **latest version** of **QGIS Standalone Installer** from the [QGIS download page](https://www.qgis.org/en/site/forusers/download#windows) and install it using the guided installation. After you have successfully installed QGIS 3, go to [Install GIS4WRF](#install-gis4wrf).
 
 ### macOS
 
