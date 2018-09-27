@@ -11,9 +11,8 @@ In this example tutorial we show how to use GIS4WRF to easily and quickly downlo
 
 !!! warning "Checklist before you begin"
     - [x] You have followed our instructions to [install](../installation) and [configure](../configuration) GIS4WRF.
-    - [x] You have enabled the [integration with WPS/WRF](../configuration/#integration-with-wpswrf) and downloaded the **latest (v4)** pre-built binaries.
+    - [x] You have enabled the [integration with WPS/WRF](../configuration/#integration-with-wpswrf) and downloaded the latest pre-built binaries. If you are running using MPI-enabled binaries, make sure that the number of `MPI processes` does not exceed `6`.
     - [x] You have enabled the [integration with NCAR's Research Data Archive](../configuration/#integration-with-ncars-research-data-archive).
-
 
 ## Overview
 The whole process from configuration to running the simulation and visualization of outputs will take no more than 20 minutes on an average machine. This process can be broken down in the following six steps:
