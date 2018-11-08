@@ -1,8 +1,5 @@
 # Welcome to GIS4WRF
 
-!!! bug "Bug with QGIS 3.4!"
-    **Do not upgrade to QGIS 3.4**. A bug has been reported at https://issues.qgis.org/issues/20249, please keep using QGIS 3.2.x until this issue has been resolved by the QGIS team.
-
 Here you can find installation instructions, documentation and tutorials for the [GIS4WRF plug-in](https://github.com/GIS4WRF/gis4wrf) ([@Meyer and Riechert 2018a]; [@Meyer and Riechert 2018b]).
 
 GIS4WRF is a free and open source QGIS plug-in to help researchers and practitioners with their [Advanced Research Weather Research and Forecasting](https://www.mmm.ucar.edu/weather-research-and-forecasting-model) ([@Skamarock et al. 2008]) modelling workflows. GIS4WRF can be used to pre-process input data, run simulations and visualize or post-process results on Windows, macOS, and Linux.
