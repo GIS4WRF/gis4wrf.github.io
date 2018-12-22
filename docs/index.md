@@ -23,4 +23,4 @@ If you are familiar with [QGIS](https://qgis.org/) and have installed the **late
 
 [@Meyer and Riechert 2018]: cite "D. Meyer, & M. Riechert. (2018). The GIS4WRF Plugin. Zenodo. https://doi.org/10.5281/zenodo.1288569"
 
-[@Skamarock et al. 2008]: http://dx.doi.org/10.5065/D68S4MVH "Skamarock, W. C., Klemp, J. B., Dudhia, J., Gill, D. O., Barker, D. M., Duda, M. G., Huang, X.-Y., Wang, W. and Powers, J. G.. (2008). A Description of the Advanced Research WRF Version 3. NCAR Technical Note NCAR/TN-475+STR, p. 113. https://doi.org/10.5065/D68S4MVH"
+[@Skamarock et al. 2008]: https://dx.doi.org/10.5065/D68S4MVH "Skamarock, W. C., Klemp, J. B., Dudhia, J., Gill, D. O., Barker, D. M., Duda, M. G., Huang, X.-Y., Wang, W. and Powers, J. G.. (2008). A Description of the Advanced Research WRF Version 3. NCAR Technical Note NCAR/TN-475+STR, p. 113. https://doi.org/10.5065/D68S4MVH"
