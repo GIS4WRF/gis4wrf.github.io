@@ -1,17 +1,21 @@
 When using GIS4WRF, we kindly ask to please acknowledge our work by referencing both the software and the article.
 
-!!! example "Adapt using your referencing style from the example below"
+### Example: adapt using your referencing style from the example below
+```
+D. Meyer, & M. Riechert. (2019). Open source QGIS toolkit for the
+Advanced Research WRF modelling system. Environmental Modelling &
+Software, 112, 166–178. https://doi.org/10.1016/j.envsoft.2018.10.018"
 
-D. Meyer, & M. Riechert. (2019). Open source QGIS toolkit for the Advanced Research WRF modelling system. Environmental Modelling & Software, 112, 166–178. https://doi.org/10.1016/j.envsoft.2018.10.018"
-
-D. Meyer, & M. Riechert. (2018). The GIS4WRF Plugin. Zenodo. https://doi.org/10.5281/zenodo.1288569
-
+D. Meyer, & M. Riechert. (2018). The GIS4WRF Plugin.
+Zenodo. https://doi.org/10.5281/zenodo.1288569
+```
 
 ### BibTex
 
 ``` bibtex
 @article{Meyer_Riechert_2019,
-title       = {Open source {QGIS} toolkit for the Advanced Research {WRF} modelling system},
+title       = {Open source {QGIS} toolkit for the
+               Advanced Research {WRF} modelling system},
 author      = {D. Meyer and M. Riechert},
 month       = {feb},
 year        = {2019},
