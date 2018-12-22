@@ -1,36 +1,39 @@
-We kindly ask to please acknowledge our work by citing and referencing both the GIS4WRF paper and the GIS4WRF software.
+When using GIS4WRF, we kindly ask to please acknowledge our work by referencing both the article and the software.
 
-!!! warning "Article under review"
-    The GIS4WRF paper is currently under review. Please let us know if you need to cite GIS4WRF in another publication so that we can provide the most up-to-date reference.
+### Example: adapt using your referencing style from the example below
+```
+D. Meyer, & M. Riechert. (2019). Open source QGIS toolkit for the
+Advanced Research WRF modelling system. Environmental Modelling &
+Software, 112, 166–178. https://doi.org/10.1016/j.envsoft.2018.10.018
 
-### For in-text citations
-
-!!! example "Cite both the paper and the software"
-    We used GIS4WRF (Meyer and Riechert, 2018a, 2018b) for ...
-
-### For the reference list
-
-!!! example "Adapt using your referencing style from the example below"
-    Meyer, D., and M. Riechert, 2018a: GIS4WRF: an integrated open source QGIS toolkit
-        for the Advanced Research WRF Framework. Manuscript submitted for publication.
-
-    Meyer, D., and M. Riechert, 2018b: The GIS4WRF Plugin.
-        doi:10.5281/zenodo.1288569.
+D. Meyer, & M. Riechert. (2018). The GIS4WRF Plugin.
+Zenodo. https://doi.org/10.5281/zenodo.1288569
+```
 
 ### BibTex
 
-```bibtex
-@unpublished{meyer_riechert_2018_article,
-    author       = {D. Meyer and M. Riechert},
-    title={GIS4WRF: an integrated open source QGIS toolkit for the Advanced Research WRF Framework},
-    note={Manuscript submitted for publication}
+``` bibtex
+@article{Meyer_Riechert_2019,
+title       = {Open source {QGIS} toolkit for the
+               Advanced Research {WRF} modelling system},
+author      = {D. Meyer and M. Riechert},
+month       = {feb},
+year        = {2019},
+journal     = {Environmental Modelling {\&} Software},
+pages       = {166--178},
+volume      = {112},
+publisher   = {Elsevier {BV}},
+doi         = {10.1016/j.envsoft.2018.10.018},
+issn        = {1364-8152},
+url         = {https://doi.org/10.1016/j.envsoft.2018.10.018}
 }
 
-@misc{meyer_riechert_2018_software,
-    author       = {D. Meyer and M. Riechert},
-    title        = {The GIS4WRF Plugin},
-    year         = 2018,
-    doi          = {10.5281/zenodo.1288569},
-    url          = {https://doi.org/10.5281/zenodo.1288569}
+@misc{Meyer_Riechert_2018,
+  author       = {D. Meyer and M. Riechert},
+  title        = {The GIS4WRF Plugin},
+  month        = {jun},
+  year         = {2018},
+  doi          = {10.5281/zenodo.1288569},
+  url          = {https://doi.org/10.5281/zenodo.1288569}
 }
 ```

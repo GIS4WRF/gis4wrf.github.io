@@ -6,11 +6,11 @@ The installation of GIS4WRF requires the **latest version** of **QGIS 3**. Make 
 ## Supported platforms
 We currently support the following operating systems (OS) and versions:
 
-| OS Name       | Version               | Code name                         |
-|---------------|-----------------------|-----------------------------------|
-|Windows        | 7, 8, 10              | n/a                               |
-|macOS          | 10.11, 10.12, 10.13   | El Capitan , Sierra , High Sierra |
-|Linux (Ubuntu) | 17.x, 18.x            | Artful, Bionic                    |
+| OS Name       | Version     | Code name                                 |
+|---------------|------------ |-------------------------------------------|
+|Windows        | 7, 8, 10    | n/a                                       |
+|macOS          | 10.11 - .14 | El Capitan , Sierra , High Sierra, Mojave |
+|Linux (Ubuntu) | 17.x, 18.x  | Artful, Bionic                            |
 
 ## Install QGIS
 
