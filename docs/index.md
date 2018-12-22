@@ -1,6 +1,6 @@
 # Welcome to GIS4WRF
 
-Here you can find installation instructions, documentation and tutorials for the [GIS4WRF plug-in](https://github.com/GIS4WRF/gis4wrf) ([@Meyer and Riechert 2018]; [@Meyer and Riechert 2019]).
+Here you can find installation instructions, documentation and tutorials for the [GIS4WRF plug-in](https://github.com/GIS4WRF/gis4wrf) ([@Meyer and Riechert 2019]; [@Meyer and Riechert 2018]).
 
 GIS4WRF is a free and open source QGIS plug-in to help researchers and practitioners with their [Advanced Research Weather Research and Forecasting](https://www.mmm.ucar.edu/weather-research-and-forecasting-model) ([@Skamarock et al. 2008]) modelling workflows. GIS4WRF can be used to pre-process input data, run simulations and visualize or post-process results on Windows, macOS, and Linux.
 
@@ -23,4 +23,4 @@ If you are familiar with [QGIS](https://qgis.org/) and have installed the **late
 
 [@Meyer and Riechert 2018]: cite "D. Meyer, & M. Riechert. (2018). The GIS4WRF Plugin. Zenodo. https://doi.org/10.5281/zenodo.1288569"
 
-[@Skamarock et al. 2008]: http://dx.doi.org/10.5065/D68S4MVH "Skamarock, W. C., Klemp, J. B., Dudhia, J., Gill, D. O., Barker, D. M., Duda, M. G., Huang, X.-Y., Wang, W. and Powers, J. G. (2008) ‘A Description of the Advanced Research WRF Version 3’, NCAR Technical Note NCAR/TN-475+STR, p. 113. doi: 10.5065/D68S4MVH."
+[@Skamarock et al. 2008]: http://dx.doi.org/10.5065/D68S4MVH "Skamarock, W. C., Klemp, J. B., Dudhia, J., Gill, D. O., Barker, D. M., Duda, M. G., Huang, X.-Y., Wang, W. and Powers, J. G.. (2008). A Description of the Advanced Research WRF Version 3. NCAR Technical Note NCAR/TN-475+STR, p. 113. https://doi.org/10.5065/D68S4MVH"
