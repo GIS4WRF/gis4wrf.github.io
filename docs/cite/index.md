@@ -1,4 +1,4 @@
-When using GIS4WRF, we kindly ask to please acknowledge our work by referencing both the software and the article.
+When using GIS4WRF, we kindly ask to please acknowledge our work by referencing both the article and the software.
 
 ### Example: adapt using your referencing style from the example below
 ```
