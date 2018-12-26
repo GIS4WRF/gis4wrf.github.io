@@ -1,7 +1,7 @@
 # Welcome to GIS4WRF
 
 !!! info "GIS4WRF Article"
-    Download a free copy of the GIS4WRF article at https://authors.elsevier.com/a/1YFYV4sKhEHMOB
+    Download a free copy of the GIS4WRF article at [https://authors.elsevier.com/a/1YFYV4sKhEHMOB](https://authors.elsevier.com/a/1YFYV4sKhEHMOB)
 
 Here you can find installation instructions, documentation and tutorials for the [GIS4WRF plug-in](https://github.com/GIS4WRF/gis4wrf) ([@Meyer and Riechert 2019]; [@Meyer and Riechert 2018]).
 
