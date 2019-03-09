@@ -91,7 +91,7 @@ Navigate to `Dataset` > `Geo`. Click on `Select Mandatory Fields in Lowest Resol
 !!! info
     Depending on your internet connection, the download can take a few minutes.
 
-### meteorological data
+### Meteorological data
 
 To download the meteorological data navigate to `Dataset` > `Met` and select:
 
