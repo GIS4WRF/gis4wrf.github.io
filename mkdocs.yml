@@ -46,4 +46,5 @@ nav:
   - Documentation: documentation/index.md
   - Tutorials: tutorials/index.md
   - How to cite: cite/index.md
+  - Report a bug: bugs/index.md
   - Copyright and license: license/index.md
