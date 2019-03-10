@@ -38,9 +38,10 @@ From QGIS launch GIS4WRF from the `Plugins` > `GIS4WRF` menu. Create a new GIS4W
 ## Define domain
 Navigate to `Simulation` > `Domain` and fill the sections as follows:
 
-- GCS/Projection: `Lambert`
+- GCS/Projection: `Lambert Conformal`
 - True Latitude 1: `3.5`
 - True Latitude 2: `7`
+- Standard Longitude: `4`
 
 Click on `Set Map CRS`
 

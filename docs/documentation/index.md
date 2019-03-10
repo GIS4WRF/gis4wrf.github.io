@@ -130,7 +130,7 @@ Used to easily create, import, and export WRF domains through a GUI interface. T
 
 - Map Type
 
-`GCS/Projection` dropdown: allows users to define the type Geographical Coordinate System (GCS) or Projection to use for creating the domain. Current supported GCS/Projections are `Latitude/Longitude` and `Lambert`. If Lambert option is selected, the two true latitudes (`True Latitude 1` and `True Latitude 2`) are required.
+`GCS/Projection` dropdown: allows users to define the type Geographical Coordinate System (GCS) or Projection to use for creating the domain. Current supported GCS/Projections are `Latitude/Longitude`,  `Lambert Conformal`, `Mercator`, `Polar Stereographic`. If `Lambert Conformal` is selected, the two true latitudes (`True Latitude 1` and `True Latitude 2`) and the `Standard Longitude` values are required. If `Polar Stereographic` is selected, the `True Latitude 1` and the `Standard Longitude` values are required.
 
 `Set Map CRS` button: set QGIS Project Coordinate Reference System (CRS) based on selected `GCS/Projection`
 
