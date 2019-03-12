@@ -136,7 +136,7 @@ GIS4WRF already pre-populates most of the namelist used by Real and WRF (`nameli
 
 For this tutorial, however, I have pre-selected the options for you. Click on `Open configuration` (1) and replace all values in the configuration window (2) with the `namelist.input` file below (simply copy and paste) and click on `Save` (3).
 
-??? note "View `namelist.input`"
+!!! note "`namelist.input`"
     ```
     &time_control
         start_year = 2018, 2018
