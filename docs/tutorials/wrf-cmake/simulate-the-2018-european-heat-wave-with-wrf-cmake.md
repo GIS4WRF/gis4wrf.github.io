@@ -87,7 +87,7 @@ Please note that `rdams-client` will create a file that contains your username a
 
 ## Configure and run WPS
 
-The WRF Preprocessing System (WPS) is used to generate inputs to the WRF program `real.exe`. WPS consists of three main programs (`geogrid.exe`, `ungrib.exe`, and `metgrid.exe`) and other utilities programs that may be used to configure specific cases. A configuration file named `namelist.wps` is used to set options for all the programs. For this simple case study, go to your WPS installation folder and replace the content of `namelist.wps` with the following configuration and change the `<ABS_PATH_TO_GEOG_DIR>` with the absolute path to the geographical data directory:
+The WRF Preprocessing System (WPS) is used to generate inputs to the WRF program `real.exe`. WPS consists of three main programs (`geogrid.exe`, `ungrib.exe`, and `metgrid.exe`) and other utilities programs that may be used to configure specific cases. A configuration file named `namelist.wps` is used to set options for all the WPS programs. For this simple case study, go to your WPS installation folder and create/replace the content of `namelist.wps` with the following configuration replacing `<ABS_PATH_TO_GEOG_DIR>` with the absolute path to the geographical data directory:
 
 
 !!! note "`namelist.wps`"
@@ -126,24 +126,24 @@ The WRF Preprocessing System (WPS) is used to generate inputs to the WRF program
 
 ### Run Geogrid
 
-From your command you can now run `geogrid.exe` to produce `geo_em` files:
+From your command prompt you can now run `geogrid.exe` to produce `geo_em` files:
 
 
 ### Run Ungrib
 
-Before you can run `ungrib.exe`, you need to copy the `Vtable.GFS` file from `ungrib/Variable_Tables` to your WPS installation directory. Rename the file `Vtable.GFS`, `Vtable` and run the Python script `link_grib.py` to link to your meterological data as follows:
+Before you can run `ungrib.exe`, you need to copy a Vtable -- in this case the `Vtable.GFS` file -- from `ungrib/Variable_Tables` to your WPS installation directory. Rename the file `Vtable.GFS`, `Vtable` and run the Python script `link_grib.py` to link to your meterological data as follows:
 
 ```
 python3 link_grib.py <PATH_TO_MET_DATA>
 
 ```
 
-Where `<PATH_TO_MET_DATA>` is the path to the meterological data you have previously downloaded (e.g. `../../../DATA/met/gdas1.fnl0p25.20180715*`). Now, from your command prompt, you can now run `ungrib.exe` to produce `FILE_` files:
+Where `<PATH_TO_MET_DATA>` is the path to the meterological data you have previously downloaded (i.e. `../../../DATA/met/gdas1.fnl0p25.20180715*`). Now, from your command prompt, run `ungrib.exe` to produce `FILE_` files.
 
 
 ### Run Metgrid
 
-From your command you run `metgrid.exe` to produce `met_em` files which will be used as inputs to the Real program:
+From your command prompt run `metgrid.exe` to produce `met_em` files which will be used as inputs to the Real program:
 
 ## Configure and run WRF
 
@@ -245,7 +245,7 @@ Go to your WRF installation directory, copy or link the files produced by `metgr
 Copy over, or link to, the `met_em` files produced by `metgrid.exe` and run `real.exe` to produce the inputs to wrf.exe.
 
 ### Run WRF
-Now that the inputs to WRF have been created, you can run the simulation. From your command prompt, run `wrf.exe` to produce the following `wrfout` files:
+Now that inputs to WRF have been created, you can run the simulation. From your command prompt, run `wrf.exe` to produce the following `wrfout` files:
 
 ```
 wrfout_d01_2018-07-15_12_00_00
