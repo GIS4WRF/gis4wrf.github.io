@@ -126,7 +126,7 @@ The WRF Preprocessing System (WPS) is used to generate inputs to the WRF program
 
 ### Run Geogrid
 
-From your command prompt you can now run `geogrid.exe` to produce `geo_em` files:
+From the WPS installation directory, run `geogrid.exe` to produce `geo_em` files.
 
 
 ### Run Ungrib
@@ -143,7 +143,7 @@ Where `<PATH_TO_MET_DATA>` is the path to the meterological data you have previo
 
 ### Run Metgrid
 
-From your command prompt run `metgrid.exe` to produce `met_em` files which will be used as inputs to the Real program:
+From your command prompt, run `metgrid.exe` to produce `met_em` files used as inputs to the Real program.
 
 ## Configure and run WRF
 
