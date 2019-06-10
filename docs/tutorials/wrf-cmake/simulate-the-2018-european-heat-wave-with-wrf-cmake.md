@@ -28,23 +28,6 @@ The whole process from configuration to running the simulation and visualization
     - [Run WRF](#run-wrf)
 - [View the results](#view-the-results)
 
-All steps assume the following folder structure:
-
-```
-.
-├── DATA
-│   ├── geog : WPS geographical data used by the Geogrid program.
-│   └── met  : initial and boundary conditions used by the Ungrib program.
-├── WPS
-│   └── build
-│       └── install : WPS installation directory
-└── WRF
-    └── build
-        └── install : WRF installation directory
-            └── test
-                └── em_real : WRF installation directory for real cases.
-
-```
 
 ## Download geographical data
 
