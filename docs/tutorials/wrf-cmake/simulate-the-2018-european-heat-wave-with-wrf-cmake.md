@@ -1,7 +1,7 @@
 # The 2018 European heat wave
 
 <p align="center">
-<img height="300" src="../assets/images/tutorials/modis_nl.jpg">
+<img height="300" src="../../../assets/images/tutorials/modis_nl.jpg">
 </p>
 <p align="center">
 MODIS Corrected Reflectance imagery for the 15 July 2018 (<a href="https://modis.gsfc.nasa.gov/data/dataprod/mod09.php">@NASA</a>).
