@@ -121,7 +121,7 @@ python3 link_grib.py <PATH_TO_MET_DATA>
 
 ```
 
-Where `<PATH_TO_MET_DATA>` is the path to the meterological data you have previously downloaded (i.e. `../../../DATA/met/gdas1.fnl0p25.20180715*`). Now, from your command prompt, run `ungrib.exe` to produce `FILE_` files.
+Where `<PATH_TO_MET_DATA>` is the path to the meterological data you have previously downloaded (e.g. `../../../DATA/met/gdas1.fnl0p25.20180715*`). Now, from your command prompt, run `ungrib.exe` to produce `FILE_` files.
 
 
 ### Run Metgrid
@@ -239,7 +239,7 @@ wrfout_d02_2018-07-15_12_00_00
 If you wish to view or analyse the data in the output files you can use tools such as [GIS4WRF](https://github.com/GIS4WRF/gis4wrf), [wrf-python](https://github.com/NCAR/wrf-python), [Ncview](http://meteora.ucsd.edu/~pierce/ncview_home_page.html).
 
 
-The following is en example using the `Visualize Output` utility tab in GIS4WRF for `wrfout_d01_2018-07-15_12_00_00`. Data are displayed geo-referenced on the map canvas. You can change the variable to display (1), slice through the simulation time-steps (2), and change the color scheme by double-clicking on the layer (3) and going into `Symbology`.
+The following is an example using the `Visualize Output` utility in GIS4WRF for `wrfout_d01_2018-07-15_12_00_00`. Data are displayed geo-referenced on the map canvas. You can change the variable to display (1), slice through the simulation time-steps (2), and change the color scheme by double-clicking on the layer (3) and going into `Symbology`.
 
 !!! info ""
     ![View Controls](../../../assets/images/tutorials/view_controls.png)
