@@ -17,16 +17,18 @@ In this example tutorial we show how to use WRF-CMake to simulate 6 hours, for a
 The whole process from configuration to running the simulation and visualization of outputs will take no more than 20 minutes on an average machine. This process can be broken down in the following 5 main steps:
 
 
-- [Download geographical data](#download-geographical-data)
-- [Download meteorological data](#download-meteorological-data)
-- [Configure and run WPS](#configure-and-run-wps)
+- [The 2018 European heat wave](#the-2018-european-heat-wave)
+  - [Overview](#overview)
+  - [Download geographical data](#download-geographical-data)
+  - [Download meteorological data](#download-meteorological-data)
+  - [Configure and run WPS](#configure-and-run-wps)
     - [Run Geogrid](#run-geogrid)
     - [Run Ungrib](#run-ungrib)
     - [Run Metgrid](#run-metgrid)
-- [Configure and run WRF](#configure-and-run-wrf)
+  - [Configure and run WRF](#configure-and-run-wrf)
     - [Run Real](#run-real)
     - [Run WRF](#run-wrf)
-- [View the results](#view-the-results)
+  - [View the results](#view-the-results)
 
 
 ## Download geographical data
@@ -242,5 +244,5 @@ If you wish to view or analyse the data in the output files you can use tools su
 The following is an example using the `Visualize Output` utility in GIS4WRF for `wrfout_d01_2018-07-15_12_00_00`. Data are displayed geo-referenced on the map canvas. You can change the variable to display (1), slice through the simulation time-steps (2), and change the color scheme by double-clicking on the layer (3) and going into `Symbology`.
 
 !!! info ""
-    ![View Controls](../../../assets/images/tutorials/view_controls.png)
+    ![View Controls](../../assets/images/tutorials/view_controls.png)
 

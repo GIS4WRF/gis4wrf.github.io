@@ -1,18 +1,18 @@
 # The 2018 European heat wave
 
 <p align="center">
-<img height="300" src="../../../assets/images/tutorials/modis_nl.jpg">
+<img height="300" src="../../assets/images/tutorials/modis_nl.jpg">
 </p>
 <p align="center">
 MODIS Corrected Reflectance imagery for the 15 July 2018 (<a href="https://modis.gsfc.nasa.gov/data/dataprod/mod09.php">@NASA</a>).
 </p>
 
-In this example tutorial we show how to use GIS4WRF to easily and quickly download data, configure WPS and WRF namelists for a *real* case, and run a WRF simulation on your local machine using the [pre-built binaries provided](../configuration/#integration-with-wpswrf). We simulate 6 hours, for an area centered in Amsterdam, for the 15 July 2018 (12:00 - 18:00) related to [the heat wave that affected the Netherlands between the 15 and 27 July 2018](https://en.wikipedia.org/wiki/2018_European_heat_wave#Netherlands). You should be able to complete this tutorial in less than 20 minutes, including simulation. On an average machine, dual core @ 2.4 GHz with 8 GB of RAM, this 6-hour simulation should take no more than 5 minutes to complete.
+In this example tutorial we show how to use GIS4WRF to easily and quickly download data, configure WPS and WRF namelists for a *real* case, and run a WRF simulation on your local machine using the [pre-built binaries provided](../../configuration/#integration-with-wpswrf). We simulate 6 hours, for an area centered in Amsterdam, for the 15 July 2018 (12:00 - 18:00) related to [the heat wave that affected the Netherlands between the 15 and 27 July 2018](https://en.wikipedia.org/wiki/2018_European_heat_wave#Netherlands). You should be able to complete this tutorial in less than 20 minutes, including simulation. On an average machine, dual core @ 2.4 GHz with 8 GB of RAM, this 6-hour simulation should take no more than 5 minutes to complete.
 
 !!! warning "Checklist before you begin"
-    - [x] You have followed our instructions to [install](../installation) and [configure](../configuration) GIS4WRF.
-    - [x] You have enabled the [integration with WPS/WRF](../configuration/#integration-with-wpswrf) and downloaded the latest pre-built binaries. If you are running using MPI-enabled binaries, make sure that the number of `MPI processes` does not exceed `6`.
-    - [x] You have enabled the [integration with NCAR's Research Data Archive](../configuration/#integration-with-ncars-research-data-archive).
+    - [x] You have followed our instructions to [install](../../installation) and [configure](../../configuration) GIS4WRF.
+    - [x] You have enabled the [integration with WPS/WRF](../../configuration/#integration-with-wpswrf) and downloaded the latest pre-built binaries. If you are running using MPI-enabled binaries, make sure that the number of `MPI processes` does not exceed `6`.
+    - [x] You have enabled the [integration with NCAR's Research Data Archive](../../configuration/#integration-with-ncars-research-data-archive).
 
 ## Overview
 The whole process from configuration to running the simulation and visualization of outputs will take no more than 20 minutes on an average machine. This process can be broken down in the following six steps:
@@ -28,7 +28,7 @@ The whole process from configuration to running the simulation and visualization
 From QGIS launch GIS4WRF from the `Plugins` > `GIS4WRF` menu. Create a new GIS4WRF project by going to `Simulation` > `General` and clicking on `Create a GIS4WRF Project` (1). A new window will appear. Create a new folder named `2018_07_15_Amsterdam` (2) and click on `Select Folder` (3).
 
 !!! info ""
-    ![Create a GIS4WRF project](../../../assets/images/tutorials/create_new_project.png)
+    ![Create a GIS4WRF project](../../assets/images/tutorials/create_new_project.png)
 
  Note that after a project is created, the `Project Path` will point to the project folder.
 
@@ -61,12 +61,12 @@ Enable (tick) `Parenting`
 
 
 !!! info ""
-    ![Define domain](../../../assets/images/tutorials/define_domain.png)
+    ![Define domain](../../assets/images/tutorials/define_domain.png)
 
 You can view the domain layers individually by clicking and expanding the domain group (1) and focus on the region of study by right-clicking on the `WRF Domains (Vector)` group and `Zoom to Group` (2).
 
 !!! info ""
-    ![Zoom to Group](../../../assets/images/tutorials/zoom_to_group.png)
+    ![Zoom to Group](../../assets/images/tutorials/zoom_to_group.png)
 
 !!! warning
     GIS4WRF defines domains from the inside out. This allows you to have full control on positioning the inner-most domain.
@@ -87,7 +87,7 @@ Download of [geographical data](#geographical-data) and [meteorological data](#m
 Navigate to `Dataset` > `Geo`. Click on `Select Mandatory Fields in Lowest Resolution` and `Download Selected Datasets`. Once the download is complete go to [meteorological data](#meteorological-data).
 
 !!! info ""
-    ![Download geographical data](../../../assets/images/tutorials/download_geo.png)
+    ![Download geographical data](../../assets/images/tutorials/download_geo.png)
 
 !!! info
     Depending on your internet connection, the download can take a few minutes.
@@ -104,7 +104,7 @@ To download the meteorological data navigate to `Dataset` > `Met` and select:
 Under `Extent` click on subset, then select `Domain 2` on the `Layers` panel (2) and click on `Set from Active Layer` (3) to subset your request. Finally, click `Download` to submit and download your request. Once the download is complete go to [Select input data](#select-input-data).
 
 !!! info ""
-    ![Download meteorological data](../../../assets/images/tutorials/download_met.png)
+    ![Download meteorological data](../../assets/images/tutorials/download_met.png)
 
 !!! info
     Depending on your internet connection and the data request preparation on NCAR's Research Data Archive servers, the download can take a few minutes.
@@ -114,7 +114,7 @@ Under `Extent` click on subset, then select `Domain 2` on the `Layers` panel (2)
 GIS4WRF automatically pre-populates WPS and WRF namelists based on your domain configuration and data selection. Go to `Simulation` > `Data`. As you already have downloaded geographical and meteorological data, simply type `lowres` in the `Domain 1` and `Domain 2` fields (1) and click on `2018-07-15 12:00 - 2018-07-15 18:00` (2) and `Use Dataset Selection from List` (3) to select the meteorological data.
 
 !!! info ""
-    ![Download meteorological data](../../../assets/images/tutorials/simulation_data.png)
+    ![Download meteorological data](../../assets/images/tutorials/simulation_data.png)
 
 ## Configure and run
 There are two main processes involved in running a real-case simulation: configure and run the WRF Preprocessing System (WPS), and configure and run WRF.
@@ -123,12 +123,12 @@ There are two main processes involved in running a real-case simulation: configu
 WPS comprises of three programs: Geogrid, Ungrib, and Metgrid. As GIS4WRF pre-populates namelists for you, you can directly go to `Simulation` > `Run` and click on the `Geogrid`, `Ungrib`, and `Metgrid` buttons individually.
 
 !!! info ""
-    ![Run WPS](../../../assets/images/tutorials/run_wps.png)
+    ![Run WPS](../../assets/images/tutorials/run_wps.png)
 
 At the end of each program you will receive the following prompt from Geogrid (1), Ungrib (2), and Metgrid (3).
 
 !!! info ""
-    ![Run WPS](../../../assets/images/tutorials/wps_outputs.png)
+    ![Run WPS](../../assets/images/tutorials/wps_outputs.png)
 
 ### WRF
 There are two programs you will need to run: Real and WRF.
@@ -225,23 +225,23 @@ For this tutorial, however, I have pre-selected the options for you. Click on `O
     ```
 
 !!! info ""
-    ![Configure WRF](../../../assets/images/tutorials/configure_wrf.png)
+    ![Configure WRF](../../assets/images/tutorials/configure_wrf.png)
 
 
 Now you are good to go, run `Real` and `WRF` (1). At the end of each program you will receive the following prompt from Real (2) and WRF (3).
 
 
 !!! info ""
-    ![Run WRF](../../../assets/images/tutorials/run_wrf.png)
+    ![Run WRF](../../assets/images/tutorials/run_wrf.png)
 
 
 ## View results
 After the simulation is complete, click `Visualize Output` (1), select  the file `wrfout_d01_2018-07-15_12_00_00` (2) and click `Open`.
 
 !!! info ""
-    ![View Results](../../../assets/images/tutorials/view_output.png)
+    ![View Results](../../assets/images/tutorials/view_output.png)
 
 Images are displayed geo-referenced on the map canvas. You can change the variable to display (1), slice through the simulation time-steps (2), and change the color scheme by double-clicking on the layer (3) and going into `Symbology`.
 
 !!! info ""
-    ![View Controls](../../../assets/images/tutorials/view_controls.png)
+    ![View Controls](../../assets/images/tutorials/view_controls.png)
