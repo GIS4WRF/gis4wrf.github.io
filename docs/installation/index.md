@@ -25,7 +25,7 @@ You need to have [Homebrew](https://brew.sh/) installed on your system. Then, si
 brew tap osgeo/osgeo4mac &&
 brew install qgis3 && brew install qgis3 && # avoid issues with current formula
 brew install gcc mpich python hdf5 netcdf &&
-pip3 install --user f90nml pyyaml netCDF4 wrf-python
+pip3 install --user f90nml netCDF4
 ```
 
 You can now launch QGIS 3 from your Terminal prompt with the `qgis3` command. To install GIS4WRF, go to [Install GIS4WRF](#install-gis4wrf).
@@ -46,7 +46,7 @@ sudo add-apt-repository -s 'deb https://qgis.org/debian artful main' &&
 sudo apt-get update &&
 sudo apt-get install -y qgis python-qgis gfortran mpich &&
 sudo apt-get install -y python3-pip &&
-pip3 install --user f90nml pyyaml netCDF4 wrf-python
+pip3 install --user f90nml netCDF4
 ```
 
 After you have successfully installed QGIS 3, go to [Install GIS4WRF](#install-gis4wrf).
@@ -64,7 +64,7 @@ sudo add-apt-repository -s 'deb https://qgis.org/debian bionic main' &&
 sudo apt-get update &&
 sudo apt-get install -y qgis python-qgis gfortran mpich &&
 sudo apt-get install -y python3-pip &&
-pip3 install --user f90nml pyyaml netCDF4 wrf-python
+pip3 install --user f90nml netCDF4
 ```
 After you have successfully installed QGIS 3, go to [Install GIS4WRF](#install-gis4wrf).
 

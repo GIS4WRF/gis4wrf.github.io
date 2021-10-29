@@ -195,17 +195,18 @@ WRF NetCDF datasets can be opened under  `QGIS` > `Layers` > `Add Layer` > `Add 
     <img height="300" src="../assets/images/gis4wrf_tab_view.jpg">
     </p>
 
-- Integration with wrf-python
-We currently provide the following additional features using wrf-python:
+#### Experimental integration with wrf-python
+GIS4WRF provides the following additional features when [wrf-python](https://github.com/NCAR/wrf-python) is available:
 
-- Vertical Interpolation of Variables
-- Generation of Derived Variables
+- Vertical interpolation of variables
+- Generation of derived variables
 
-- Vertical Interpolation of Variables
-Currently we offer integration with the vertical interpolation functions provided by wrf-python. Vertical interpolation options can be selected by selecting the variable name and enabling the `Interpolate Vertical Level` check-box.
+!!! warning "Experimental"
+    Due to [lack of Python binary wheels](https://github.com/NCAR/wrf-python/issues/42), wrf-python is not available by default when installing GIS4WRF. No support is provided on how to install wrf-python into the QGIS Python environment.
 
-- Generation of Derived Variables
-The following variables are derived using wrf-python:
+Vertical interpolation options can be chosen by selecting the variable name and enabling the `Interpolate Vertical Level` check-box.
+
+The following derived variables are generated using wrf-python:
 
 |Variable Name | Description |
 |--------|------|
