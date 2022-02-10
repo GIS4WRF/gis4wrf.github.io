@@ -1,0 +1,1137 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Toolkit for pre- and post-processing, visualizing, and running simulations in WRF">
+      
+      
+        <meta name="author" content="D. Meyer and M. Riechert">
+      
+      
+        <link rel="canonical" href="https://gis4wrf.github.io/documentation/">
+      
+      <link rel="icon" href="../assets/images/gis4wrf_logo.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.10">
+    
+    
+      
+        <title>Documentation - GIS4WRF</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.d6be258b.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#getting-started" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="GIS4WRF" class="md-header__button md-logo" aria-label="GIS4WRF" data-md-component="logo">
+      
+  <img src="../assets/images/gis4wrf_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GIS4WRF
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Documentation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/GIS4WRF/gis4wrf" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    gis4wrf/gis4wrf
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="GIS4WRF" class="md-nav__button md-logo" aria-label="GIS4WRF" data-md-component="logo">
+      
+  <img src="../assets/images/gis4wrf_logo.png" alt="logo">
+
+    </a>
+    GIS4WRF
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/GIS4WRF/gis4wrf" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    gis4wrf/gis4wrf
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Documentation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Documentation
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#menu-items" class="md-nav__link">
+    Menu items
+  </a>
+  
+    <nav class="md-nav" aria-label="Menu items">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plugins-menu" class="md-nav__link">
+    Plugins menu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layer-menu" class="md-nav__link">
+    Layer menu
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dock-items" class="md-nav__link">
+    Dock items
+  </a>
+  
+    <nav class="md-nav" aria-label="Dock items">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#home" class="md-nav__link">
+    Home
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datasets" class="md-nav__link">
+    Datasets
+  </a>
+  
+    <nav class="md-nav" aria-label="Datasets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#geo" class="md-nav__link">
+    Geo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#met" class="md-nav__link">
+    Met
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process" class="md-nav__link">
+    Process
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simulation" class="md-nav__link">
+    Simulation
+  </a>
+  
+    <nav class="md-nav" aria-label="Simulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    General
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#domains" class="md-nav__link">
+    Domains
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run" class="md-nav__link">
+    Run
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-tab" class="md-nav__link">
+    View Tab
+  </a>
+  
+    <nav class="md-nav" aria-label="View Tab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#experimental-integration-with-wrf-python" class="md-nav__link">
+    Experimental integration with wrf-python
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/" class="md-nav__link">
+        Tutorials
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cite/" class="md-nav__link">
+        How to cite
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bugs/" class="md-nav__link">
+        Report a bug
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license/" class="md-nav__link">
+        Copyright and license
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#menu-items" class="md-nav__link">
+    Menu items
+  </a>
+  
+    <nav class="md-nav" aria-label="Menu items">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plugins-menu" class="md-nav__link">
+    Plugins menu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layer-menu" class="md-nav__link">
+    Layer menu
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dock-items" class="md-nav__link">
+    Dock items
+  </a>
+  
+    <nav class="md-nav" aria-label="Dock items">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#home" class="md-nav__link">
+    Home
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datasets" class="md-nav__link">
+    Datasets
+  </a>
+  
+    <nav class="md-nav" aria-label="Datasets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#geo" class="md-nav__link">
+    Geo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#met" class="md-nav__link">
+    Met
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process" class="md-nav__link">
+    Process
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simulation" class="md-nav__link">
+    Simulation
+  </a>
+  
+    <nav class="md-nav" aria-label="Simulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    General
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#domains" class="md-nav__link">
+    Domains
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run" class="md-nav__link">
+    Run
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-tab" class="md-nav__link">
+    View Tab
+  </a>
+  
+    <nav class="md-nav" aria-label="View Tab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#experimental-integration-with-wrf-python" class="md-nav__link">
+    Experimental integration with wrf-python
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<h1 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you are new to GIS4WRF, we recommend you to start with the <a href="../tutorials">tutorials</a> section.</p>
+</div>
+<p>After you have <a href="../installation">installed</a> and <a href="../configuration">configured</a> GIS4WRF, you can find all the features and tools in two separate menus and a single container — referred to as dock. A summary of features and tools is given in the tables below under <a href="#menu-items">Menu items</a> and <a href="#dock-items">Dock items</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Assumptions</p>
+<p>GIS4WRF requires users to be familiar with basic concepts of meteorology and numerical modelling. Users should be familiar with the WPS WRF processing workflow. GIS4WRF is meant to simplify and empower users to carry out specialized and time-consuming tasks.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Draft version</p>
+<p>This documentation is a draft. Please let us know if you find something missing, unclear, or incorrect by <a href="https://github.com/GIS4WRF/gis4wrf/issues">opening an issue on GitHub</a>.</p>
+</div>
+<h2 id="menu-items">Menu items<a class="headerlink" href="#menu-items" title="Permanent link">&para;</a></h2>
+<p>The location and description of each menu item can be found in the tables below.</p>
+<h3 id="plugins-menu">Plugins menu<a class="headerlink" href="#plugins-menu" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>QGIS Menus</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Plugins</code> &gt; <code>GIS4WRF</code> &gt; <code>GIS4WRF</code></td>
+<td>Launch GIS4WRF Dock</td>
+</tr>
+<tr>
+<td><code>Plugins</code> &gt; <code>GIS4WRF</code> &gt; <code>About</code></td>
+<td>Changelog and license information</td>
+</tr>
+<tr>
+<td><code>Plugins</code> &gt; <code>GIS4WRF</code> &gt; <code>Report a bug</code></td>
+<td>Link to GIS4WRF's issue system on GitHub</td>
+</tr>
+</tbody>
+</table>
+<details class="info">
+<summary>Click to view the Plugins menu</summary>
+<p><img alt="Plugins menu" src="../assets/images/gis4wrf_menu_plugins.png" /></p>
+</details>
+<h3 id="layer-menu">Layer menu<a class="headerlink" href="#layer-menu" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>QGIS Menus</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Layers</code> &gt; <code>Add Layer</code> &gt; <code>Add WRF NetCDF Layer...</code></td>
+<td>Load WRF-NetCDF dataset into QGIS</td>
+</tr>
+<tr>
+<td><code>Layers</code> &gt; <code>Add Layer</code> &gt; <code>Add WPS Binary Layer...</code></td>
+<td>Load WPS Binary dataset into QGIS</td>
+</tr>
+</tbody>
+</table>
+<details class="info">
+<summary>Click to view the Layer menu</summary>
+<p><img alt="Layer menu" src="../assets/images/gis4wrf_menu_layer.png" /></p>
+</details>
+<h2 id="dock-items">Dock items<a class="headerlink" href="#dock-items" title="Permanent link">&para;</a></h2>
+<p>The GIS4WRF dock can be launched from the <code>Plugins</code> &gt; <code>GIS4WRF</code> &gt; <code>GIS4WRF</code> menu. There you can find most of the features and tools to pre-process data, configure domains, run WPS and WRF programs, and visualize your simulation results. The location and description of each tab and sub-tabs can be found in the table below.</p>
+<table>
+<thead>
+<tr>
+<th>GIS4WRF Dock</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Home</code></td>
+<td>View documents and tutorials</td>
+</tr>
+<tr>
+<td><code>Datasets</code> &gt; <code>Geo</code></td>
+<td>Download WPS geographical datasets</td>
+</tr>
+<tr>
+<td><code>Datasets</code> &gt; <code>Met</code></td>
+<td>Download meteorological datasets from NCAR's RDA</td>
+</tr>
+<tr>
+<td><code>Datasets</code> &gt; <code>Process</code></td>
+<td>Convert raster data (e.g.  GeoTIFF) into WPS geographical datasets</td>
+</tr>
+<tr>
+<td><code>Simulation</code> &gt; <code>General</code></td>
+<td>Create or open GIS4WRF projects</td>
+</tr>
+<tr>
+<td><code>Simulation</code> &gt; <code>Domain</code></td>
+<td>Create, import and export domains</td>
+</tr>
+<tr>
+<td><code>Simulation</code> &gt; <code>Data</code></td>
+<td>Define geographical and meteorological datasets to use in simulation</td>
+</tr>
+<tr>
+<td><code>Simulation</code> &gt; <code>Run</code></td>
+<td>Pre-populate, check and export namelists and run WPS and WRF programs</td>
+</tr>
+<tr>
+<td><code>View</code></td>
+<td>Visualize and post-process WPS and WRF input or outputs</td>
+</tr>
+</tbody>
+</table>
+<h3 id="home">Home<a class="headerlink" href="#home" title="Permanent link">&para;</a></h3>
+<p>The home tab is used to provide offline documentation and tutorials.</p>
+<details class="info">
+<summary>Click to view the Home tab</summary>
+<p><p align="center">
+<img height="300" src="../assets/images/gis4wrf_tab_home.png">
+</p></p>
+</details>
+<h3 id="datasets">Datasets<a class="headerlink" href="#datasets" title="Permanent link">&para;</a></h3>
+<p>The <code>Datasets</code> tab is composed of three main subtabs: <code>Geo</code>, <code>Met</code>, and <code>Process</code>. In these subtabs, you can find tools to download standard Geogrid binary datasets (also referred to as 'static data'), download meteorological datasets using the integration with NCAR's Research Data Archive (RDA), and convert geo-referenced data (e.g. GeoTIFF) to Geogrid binary format.</p>
+<h4 id="geo">Geo<a class="headerlink" href="#geo" title="Permanent link">&para;</a></h4>
+<p>The <code>Geo</code> subtab is used to download standard Geogrid binary datasets (i.e.from <a href="http://www2.mmm.ucar.edu/wrf/users/download/get_sources_wps_geog.html">http://www2.mmm.ucar.edu/wrf/users/download/get_sources_wps_geog.html</a>) locally. The Geogrid binary datasets are downloaded and saved in the <a href="../configuration/#set-the-working-directory">GIS4WRF working directory</a> under <code>&lt;GIS4WRF_WORKING_DIRECTORY&gt;/datasets/geog</code></p>
+<details class="info">
+<summary>Click to view the Geo subtab</summary>
+<p><p align="center">
+<img height="300" src="../assets/images/gis4wrf_tab_datasets_geo.png">
+</p></p>
+</details>
+<h4 id="met">Met<a class="headerlink" href="#met" title="Permanent link">&para;</a></h4>
+<p>The <code>Met</code> subtab is used to download NCAR datasets supported by WPS from <a href="https://rda.ucar.edu/">NCAR's Research Data Archive (RDA)</a>. A valid RDA account is required to use this utility and the username and password must be set — for more information see the <a href="../configuration/#integration-with-ncars-research-data-archive">configuration</a> section. A list of currently supported datasets can found in the table below:</p>
+<table>
+<thead>
+<tr>
+<th>Dataset ID</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ds083.0</code></td>
+<td><a href="https://rda.ucar.edu/datasets/ds083.0/">NCEP FNL Operational Model Global Tropospheric Analyses, April 1997 through June 2007</a></td>
+</tr>
+<tr>
+<td><code>ds083.2</code></td>
+<td><a href="https://rda.ucar.edu/datasets/ds083.2/">NCEP FNL Operational Model Global Tropospheric Analyses, continuing from July 1999</a></td>
+</tr>
+<tr>
+<td><code>ds083.3</code></td>
+<td><a href="https://rda.ucar.edu/datasets/ds083.3/">NCEP GDAS/FNL 0.25 Degree Global Tropospheric Analyses and Forecast Grids</a></td>
+</tr>
+<tr>
+<td><code>ds084.1</code></td>
+<td><a href="https://rda.ucar.edu/datasets/ds084.1/">NCEP GFS 0.25 Degree Global Forecast Grids Historical Archive</a></td>
+</tr>
+</tbody>
+</table>
+<details class="info">
+<summary>Click to view the Met subtab</summary>
+<p><p align="center">
+<img height="300" src="../assets/images/gis4wrf_tab_datasets_met.png">
+</p></p>
+</details>
+<p>When the dataset name is selected, the available product names for the specific dataset become available. Start and end date and time are automatically restricted to the available periods for the specific dataset. Requests can be spatially subsetted by clicking on the <code>subset</code> button. When the <code>Download</code> button is clicked, the request will be automatically sent to RDA and downloaded when the files become available (Note that if the request is large it may take several minutes before the data becomes available). Data are downloaded and saved in the <a href="../configuration/#set-the-working-directory">GIS4WRF working directory</a> under <code>&lt;GIS4WRF_WORKING_DIRECTORY&gt;/datasets/met</code>.</p>
+<h4 id="process">Process<a class="headerlink" href="#process" title="Permanent link">&para;</a></h4>
+<p>The <code>Process</code> subtab contains a tool to convert from QGIS raster layers to WPS binary format data. The tool supports the conversion of both categorical, and continuous data.</p>
+<details class="info">
+<summary>Click to view the Process subtab</summary>
+<p><p align="center">
+<img height="300" src="../assets/images/gis4wrf_tab_dataset_process.png">
+</p></p>
+</details>
+<h3 id="simulation">Simulation<a class="headerlink" href="#simulation" title="Permanent link">&para;</a></h3>
+<p>The <code>Simulation</code> tab contains tools to help you prepare your simulations. Here, you will find four subtabs: <code>General</code>, <code>Domain</code>, <code>Data</code>, and <code>Run</code>. In <code>General</code>, you can create and open existing GIS4WRF projects. The <code>Domain</code>, <code>Data</code>, and <code>Run</code> subtabs contain tools to help you define and run a WRF simulation such as defining datasets to use in your simulation, configure namelists and run WPS and WRF programs.</p>
+<h4 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h4>
+<p>Used to create a new, or to open an existing GIS4WRF project. By default a project is created inside the GIS4WRF default working directory.</p>
+<details class="info">
+<summary>Click to view the General subtab</summary>
+<p><p align="center">
+<img height="300" src="../assets/images/gis4wrf_tab_simulation_general.png">
+</p></p>
+</details>
+<h4 id="domains">Domains<a class="headerlink" href="#domains" title="Permanent link">&para;</a></h4>
+<p>Used to easily create, import, and export WRF domains through a GUI interface. This configuration will be used to generate the relevant sections in <code>namelist.wps</code> and <code>namelist.wrf</code>.</p>
+<details class="info">
+<summary>Click to view the Domain subtab</summary>
+<p><p align="center">
+<img height="300" src="../assets/images/gis4wrf_tab_simulation_domain.png">
+</p></p>
+</details>
+<ul>
+<li>Import/Export</li>
+</ul>
+<p><code>Import from namelist</code> button: reads a <code>namelist.wps</code> file and populates the fields</p>
+<p><code>Export to namelist</code> button: exports domain configuration to a <code>namelist.wps</code> file</p>
+<ul>
+<li>Map Type</li>
+</ul>
+<p><code>GCS/Projection</code> dropdown: allows users to define the type Geographical Coordinate System (GCS) or Projection to use for creating the domain. Current supported GCS/Projections are <code>Latitude/Longitude</code>,  <code>Lambert Conformal</code>, <code>Mercator</code>, <code>Polar Stereographic</code>. If <code>Lambert Conformal</code> is selected, the two true latitudes (<code>True Latitude 1</code> and <code>True Latitude 2</code>) and the <code>Standard Longitude</code> values are required. If <code>Polar Stereographic</code> is selected, the <code>True Latitude 1</code> and the <code>Standard Longitude</code> values are required.</p>
+<p><code>Set Map CRS</code> button: set QGIS Project Coordinate Reference System (CRS) based on selected <code>GCS/Projection</code></p>
+<ul>
+<li>Horizontal Grid Spacing</li>
+</ul>
+<p>Domain horizontal grid spacing in decimal degrees (°) for <code>Latitude/Longitude</code> or in meters (m) for <code>Lambert</code></p>
+<ul>
+<li>Grid Extent Calculator</li>
+</ul>
+<p><code>Set to Canvas Extent</code> allows the user to set the domain center-point <code>Longitude</code>, <code>Latitude</code>, and the grid extent <code>Horizontal</code> and <code>Vertical</code> to the QGIS canvas extent. The extent can be modified in <code>Advanced Configuration</code> (see next section).</p>
+<p><code>Set to Active Layer Extent</code> allows the user to set the domain center-point <code>Longitude</code>, <code>Latitude</code>, and the grid extent <code>Horizontal</code> and <code>Vertical</code> to the extent of the active layer in QGIS. The extent can be modified in <code>Advanced Configuration</code> (see next section).</p>
+<ul>
+<li>Advanced Configuration</li>
+</ul>
+<p>When checked, it enables the user to manually set the center-point latitude and longitude in decimal degrees (°), and the horizontal and vertical gird extent for the inner-most domain.</p>
+<ul>
+<li>Enable Parenting</li>
+</ul>
+<p>When checked, it enables the user to create nested-type domains. The number of parent domains can be selected (min:1, max:21). The user must set the <code>child-to-parent ratio</code> as well as the padding. The horizontal resolution for the parent domain is calculated automatically based on the resolution of the child domain. <strong>NB:</strong> GIS4WRF calculates nesting opposite to the standard way of creating domains in WRF — parent domains are created based on the location, extent and resolution of the child domain.</p>
+<h4 id="data">Data<a class="headerlink" href="#data" title="Permanent link">&para;</a></h4>
+<p>Used to set datasets to be added in the configuration of namelists.</p>
+<details class="info">
+<summary>Click to view the Data subtab</summary>
+<p><p align="center">
+<img height="300" src="../assets/images/gis4wrf_tab_simulation_data.png">
+</p></p>
+</details>
+<ul>
+<li>
+<p>Geographical Data
+For each domain, the type of geographical data is selected by clicking on the <code>+</code> button next to each domain.
+Optionally, under <code>Add Dataset</code>, a new dataset can be imported to be used in the simulation. This configuration will be used to generate the relevant section in <code>namelist.wps</code> and <code>GEOGRID.TBL</code>.</p>
+</li>
+<li>
+<p>Meteorological Data
+The meteorological data is shown under the <code>Available Dataset</code> and added by selecting the dataset and time range to be used in the simulation, and clicking on the <code>Use dataset selection from list</code> button. This configuration will be used to generate the relevant sections in <code>namelist.wps</code> and <code>namelist.wrf</code>.</p>
+</li>
+</ul>
+<p>External or local datasets can be imported using the <code>Use Custom Dataset</code> button.</p>
+<details class="info">
+<summary>Click to view how to import external met datasets</summary>
+<p><p align="center">
+<img height="300" src="../assets/images/gis4wrf_use_custom_met_dataset.png">
+</p></p>
+</details>
+<h4 id="run">Run<a class="headerlink" href="#run" title="Permanent link">&para;</a></h4>
+<p>The run tab is used to run WPS and WRF programs with the configuration generated by GIS4WRF. Sections of namelists such as physics options can be edited by clicking on the <code>Open Configuration</code> button. The output is displayed in the integrated <code>Program output</code> window.</p>
+<details class="info">
+<summary>Click to view the Run subtab</summary>
+<p><p align="center">
+<img height="300" src="../assets/images/gis4wrf_tab_simulation_run.png">
+</p></p>
+</details>
+<h3 id="view-tab">View Tab<a class="headerlink" href="#view-tab" title="Permanent link">&para;</a></h3>
+<p>WRF NetCDF datasets can be opened under  <code>QGIS</code> &gt; <code>Layers</code> &gt; <code>Add Layer</code> &gt; <code>Add WRF NetCDF Layer...</code>. Variables included in WRF NetCDF datasets are shown as a list in the <em>View</em> tab. The time slider at the end of the list of variables provides a fast way to slice through different time stamps. For variables that include vertical levels, the <code>Vertical Level</code> dropdown menu will become selectable.</p>
+<details class="info">
+<summary>Click to view the View tab</summary>
+<p><p align="center">
+<img height="300" src="../assets/images/gis4wrf_tab_view.jpg">
+</p></p>
+</details>
+<h4 id="experimental-integration-with-wrf-python">Experimental integration with wrf-python<a class="headerlink" href="#experimental-integration-with-wrf-python" title="Permanent link">&para;</a></h4>
+<p>GIS4WRF provides the following additional features when <a href="https://github.com/NCAR/wrf-python">wrf-python</a> is available:</p>
+<ul>
+<li>Vertical interpolation of variables</li>
+<li>Generation of derived variables</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Experimental</p>
+<p>Due to <a href="https://github.com/NCAR/wrf-python/issues/42">lack of Python binary wheels</a>, wrf-python is not available by default when installing GIS4WRF. No support is provided on how to install wrf-python into the QGIS Python environment.</p>
+</div>
+<p>Vertical interpolation options can be chosen by selecting the variable name and enabling the <code>Interpolate Vertical Level</code> check-box.</p>
+<p>The following derived variables are generated using wrf-python:</p>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AVO</td>
+<td>Absolute Vorticity</td>
+</tr>
+<tr>
+<td>DBZ</td>
+<td>Radar Reflectivity</td>
+</tr>
+<tr>
+<td>ETH</td>
+<td>Equivalent Potential Temperature</td>
+</tr>
+<tr>
+<td>GEOPT</td>
+<td>Geopotential for Mass Grid</td>
+</tr>
+<tr>
+<td>HELICITY</td>
+<td>Storm Relative Helicity</td>
+</tr>
+<tr>
+<td>MDBZ</td>
+<td>Maximum Radar Reflectivity</td>
+</tr>
+<tr>
+<td>Omega</td>
+<td></td>
+</tr>
+<tr>
+<td>PVO</td>
+<td>Potential Vorticity</td>
+</tr>
+<tr>
+<td>PW</td>
+<td>Precipitable Water</td>
+</tr>
+<tr>
+<td>RH</td>
+<td>Relative Humidity</td>
+</tr>
+<tr>
+<td>RH2</td>
+<td>Relative Humidity at 2 m</td>
+</tr>
+<tr>
+<td>SLP</td>
+<td>Sea Level Pressure</td>
+</tr>
+<tr>
+<td>TC</td>
+<td>Temperature</td>
+</tr>
+<tr>
+<td>TD</td>
+<td>Dew Point Temperature</td>
+</tr>
+<tr>
+<td>TD2</td>
+<td>Dew Point Temperature at 2 m</td>
+</tr>
+<tr>
+<td>TH</td>
+<td>Potential Temperature</td>
+</tr>
+<tr>
+<td>TH2</td>
+<td>Potential Temperature at 2 m</td>
+</tr>
+<tr>
+<td>TK</td>
+<td>Temperature</td>
+</tr>
+<tr>
+<td>TV</td>
+<td>Virtual Temperature</td>
+</tr>
+<tr>
+<td>TWB</td>
+<td>Wet Bulb Temperature</td>
+</tr>
+<tr>
+<td>UA</td>
+<td>U-component of Wind on Mass Points</td>
+</tr>
+<tr>
+<td>VA</td>
+<td>V-component of Wind on Mass Points</td>
+</tr>
+<tr>
+<td>WA</td>
+<td>W-component of Wind on Mass Points</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>Model Hight</td>
+</tr>
+</tbody>
+</table>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../configuration/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Configuration" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Configuration
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../tutorials/" class="md-footer__link md-footer__link--next" aria-label="Next: Tutorials" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Tutorials
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright 2018 D. Meyer and M. Riechert
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.092fa1f6.min.js"}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e3b2bf44.min.js"></script>
+      
+    
+  </body>
+</html>
