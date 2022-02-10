@@ -287,26 +287,6 @@
     Ubuntu
   </a>
   
-    <nav class="md-nav" aria-label="Ubuntu">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#17x-artful" class="md-nav__link">
-    17.x (Artful)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#18x-bionic" class="md-nav__link">
-    18.x (Bionic)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
       </ul>
@@ -477,26 +457,6 @@
     Ubuntu
   </a>
   
-    <nav class="md-nav" aria-label="Ubuntu">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#17x-artful" class="md-nav__link">
-    17.x (Artful)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#18x-bionic" class="md-nav__link">
-    18.x (Bionic)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
       </ul>
@@ -532,72 +492,31 @@
 <p>For best user-experience and easiest installation, install on Windows.</p>
 </div>
 <h2 id="supported-platforms">Supported platforms<a class="headerlink" href="#supported-platforms" title="Permanent link">&para;</a></h2>
-<p>We currently support the following operating systems (OS) and versions:</p>
-<table>
-<thead>
-<tr>
-<th>OS Name</th>
-<th>Version</th>
-<th>Code name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Windows</td>
-<td>7, 8, 10</td>
-<td>n/a</td>
-</tr>
-<tr>
-<td>macOS</td>
-<td>10.11 - .14</td>
-<td>El Capitan , Sierra , High Sierra, Mojave</td>
-</tr>
-<tr>
-<td>Linux (Ubuntu)</td>
-<td>17.x, 18.x</td>
-<td>Artful, Bionic</td>
-</tr>
-</tbody>
-</table>
+<p>GIS4WRF has been tested on Windows, macOS, and Ubuntu.</p>
 <h2 id="install-qgis">Install QGIS<a class="headerlink" href="#install-qgis" title="Permanent link">&para;</a></h2>
 <h3 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
 <p>Download the <strong>latest version</strong> of <strong>QGIS Standalone Installer</strong> from the <a href="https://www.qgis.org/en/site/forusers/download#windows">QGIS download page</a> and install it using the guided installation. After you have successfully installed QGIS 3, go to <a href="#install-gis4wrf">Install GIS4WRF</a>.</p>
 <h3 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h3>
+<p><strong>NOTE:</strong> The macOS instructions are outdated. If you own a Mac and want to help out, try installing QGIS from the <a href="https://qgis.org/en/site/forusers/download.html#mac">QGIS download page</a> and then continue with <a href="#install-gis4wrf">Install GIS4WRF</a>. Please <a href="https://github.com/GIS4WRF/gis4wrf/issues">report back</a> on your experience, positive or negative.</p>
+<p>Old instructions:</p>
 <p>You need to have <a href="https://brew.sh/">Homebrew</a> installed on your system. Then, simply copy, paste and execute the following in your Terminal prompt:</p>
 <div class="highlight"><pre><span></span><code>brew tap osgeo/osgeo4mac <span class="o">&amp;&amp;</span>
 brew install qgis3 <span class="o">&amp;&amp;</span> brew install qgis3 <span class="o">&amp;&amp;</span> <span class="c1"># avoid issues with current formula</span>
-brew install gcc mpich python hdf5 netcdf <span class="o">&amp;&amp;</span>
+brew install mpich python hdf5 netcdf <span class="o">&amp;&amp;</span>
 pip3 install --user f90nml netCDF4
 </code></pre></div>
 <p>You can now launch QGIS 3 from your Terminal prompt with the <code>qgis3</code> command. To install GIS4WRF, go to <a href="#install-gis4wrf">Install GIS4WRF</a>.</p>
 <h3 id="ubuntu">Ubuntu<a class="headerlink" href="#ubuntu" title="Permanent link">&para;</a></h3>
-<p>The installation of QGIS on Ubuntu is slightly different depending on your version of Ubuntu. If you are running a version prior to Ubuntu 17.x, you must upgrade to the most recent version. If do not know what version of Ubuntu you are running, run <code>lsb_release -a | grep Release</code> in your Terminal prompt.</p>
-<h4 id="17x-artful">17.x (Artful)<a class="headerlink" href="#17x-artful" title="Permanent link">&para;</a></h4>
 <p>Copy, paste and execute the following in your Terminal prompt:</p>
-<div class="highlight"><pre><span></span><code>sudo apt-get install -y software-properties-common <span class="o">&amp;&amp;</span>
-wget -O - https://qgis.org/downloads/qgis-2017.gpg.key <span class="p">|</span> gpg --import <span class="o">&amp;&amp;</span>
-gpg --fingerprint CAEB3DC3BDF7FB45 <span class="o">&amp;&amp;</span>
-gpg --export --armor CAEB3DC3BDF7FB45 <span class="p">|</span> sudo apt-key add - <span class="o">&amp;&amp;</span>
-sudo add-apt-repository -s <span class="s1">&#39;deb https://qgis.org/debian artful main&#39;</span> <span class="o">&amp;&amp;</span>
-sudo apt-get update <span class="o">&amp;&amp;</span>
-sudo apt-get install -y qgis python-qgis gfortran mpich <span class="o">&amp;&amp;</span>
-sudo apt-get install -y python3-pip <span class="o">&amp;&amp;</span>
+<div class="highlight"><pre><span></span><code>sudo apt-get install -y software-properties-common gnupg
+wget -qO - https://qgis.org/downloads/qgis-2021.gpg.key <span class="p">|</span> sudo gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/qgis-archive.gpg --import
+sudo chmod a+r /etc/apt/trusted.gpg.d/qgis-archive.gpg
+sudo add-apt-repository <span class="s2">&quot;deb https://qgis.org/ubuntu </span><span class="k">$(</span>lsb_release -c -s<span class="k">)</span><span class="s2"> main&quot;</span>
+sudo apt-get update
+sudo apt-get install -y qgis mpich python3-pip
 pip3 install --user f90nml netCDF4
 </code></pre></div>
 <p>After you have successfully installed QGIS 3, go to <a href="#install-gis4wrf">Install GIS4WRF</a>.</p>
-<h4 id="18x-bionic">18.x (Bionic)<a class="headerlink" href="#18x-bionic" title="Permanent link">&para;</a></h4>
-<p>Copy, paste and execute the following in your Terminal prompt:</p>
-<p><div class="highlight"><pre><span></span><code>sudo apt-get install -y software-properties-common <span class="o">&amp;&amp;</span>
-wget -O - https://qgis.org/downloads/qgis-2017.gpg.key <span class="p">|</span> gpg --import <span class="o">&amp;&amp;</span>
-gpg --fingerprint CAEB3DC3BDF7FB45 <span class="o">&amp;&amp;</span>
-gpg --export --armor CAEB3DC3BDF7FB45 <span class="p">|</span> sudo apt-key add - <span class="o">&amp;&amp;</span>
-sudo add-apt-repository -s <span class="s1">&#39;deb https://qgis.org/debian bionic main&#39;</span> <span class="o">&amp;&amp;</span>
-sudo apt-get update <span class="o">&amp;&amp;</span>
-sudo apt-get install -y qgis python-qgis gfortran mpich <span class="o">&amp;&amp;</span>
-sudo apt-get install -y python3-pip <span class="o">&amp;&amp;</span>
-pip3 install --user f90nml netCDF4
-</code></pre></div>
-After you have successfully installed QGIS 3, go to <a href="#install-gis4wrf">Install GIS4WRF</a>.</p>
 <h2 id="install-gis4wrf">Install GIS4WRF<a class="headerlink" href="#install-gis4wrf" title="Permanent link">&para;</a></h2>
 <p>The installation of GIS4WRF is straightforward and can be done directly in QGIS under the <code>Plugins</code> &gt; <code>Manage and Install Plugins...</code> menu. If you want to know how to download pre-built binaries for WPS and WRF so that you can run simulations on Windows, macOS and Linux, see the <a href="../configuration">Configuration</a> section. To learn how to use GIS4WRF see the <a href="../documentation/overview">Documentation</a> or <a href="../tutorials">Tutorials</a> section.</p>
 <p><img alt="Install GIS4WRF" src="../assets/images/gis4wrf-installation.gif" /></p>
