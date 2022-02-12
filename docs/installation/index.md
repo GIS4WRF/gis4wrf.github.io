@@ -12,21 +12,7 @@ GIS4WRF has been tested on Windows, macOS, and Ubuntu.
 Download the **latest version** of **QGIS Standalone Installer** from the [QGIS download page](https://www.qgis.org/en/site/forusers/download#windows) and install it using the guided installation. After you have successfully installed QGIS 3, go to [Install GIS4WRF](#install-gis4wrf).
 
 ### macOS
-
-**NOTE:** The macOS instructions are outdated. If you own a Mac and want to help out, try installing QGIS from the [QGIS download page](https://qgis.org/en/site/forusers/download.html#mac) and then continue with [Install GIS4WRF](#install-gis4wrf). Please [report back](https://github.com/GIS4WRF/gis4wrf/issues) on your experience, positive or negative.
-
-Old instructions:
-
-You need to have [Homebrew](https://brew.sh/) installed on your system. Then, simply copy, paste and execute the following in your Terminal prompt:
-
-```bash
-brew tap osgeo/osgeo4mac &&
-brew install qgis3 && brew install qgis3 && # avoid issues with current formula
-brew install mpich python hdf5 netcdf &&
-pip3 install --user f90nml netCDF4
-```
-
-You can now launch QGIS 3 from your Terminal prompt with the `qgis3` command. To install GIS4WRF, go to [Install GIS4WRF](#install-gis4wrf).
+Download the **latest version** of **QGIS macOS Installer** from the [QGIS download page](https://qgis.org/en/site/forusers/download.html#mac)  and install it using the guided installation. After you have successfully installed QGIS 3, go to [Install GIS4WRF](#install-gis4wrf).
 
 ### Ubuntu
 
