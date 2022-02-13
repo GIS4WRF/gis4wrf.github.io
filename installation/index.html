@@ -265,33 +265,6 @@
     Install QGIS
   </a>
   
-    <nav class="md-nav" aria-label="Install QGIS">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
-    Windows
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#macos" class="md-nav__link">
-    macOS
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ubuntu" class="md-nav__link">
-    Ubuntu
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -435,33 +408,6 @@
     Install QGIS
   </a>
   
-    <nav class="md-nav" aria-label="Install QGIS">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
-    Windows
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#macos" class="md-nav__link">
-    macOS
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ubuntu" class="md-nav__link">
-    Ubuntu
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -494,20 +440,11 @@
 <h2 id="supported-platforms">Supported platforms<a class="headerlink" href="#supported-platforms" title="Permanent link">&para;</a></h2>
 <p>GIS4WRF has been tested on Windows, macOS, and Ubuntu.</p>
 <h2 id="install-qgis">Install QGIS<a class="headerlink" href="#install-qgis" title="Permanent link">&para;</a></h2>
-<h3 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
-<p>Download the <strong>latest version</strong> of <strong>QGIS Standalone Installer</strong> from the <a href="https://www.qgis.org/en/site/forusers/download#windows">QGIS download page</a> and install it using the guided installation. After you have successfully installed QGIS 3, go to <a href="#install-gis4wrf">Install GIS4WRF</a>.</p>
-<h3 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h3>
-<p>Download the <strong>latest version</strong> of <strong>QGIS macOS Installer</strong> from the <a href="https://qgis.org/en/site/forusers/download.html#mac">QGIS download page</a>  and install it using the guided installation. After you have successfully installed QGIS 3, go to <a href="#install-gis4wrf">Install GIS4WRF</a>.</p>
-<h3 id="ubuntu">Ubuntu<a class="headerlink" href="#ubuntu" title="Permanent link">&para;</a></h3>
-<p>Copy, paste and execute the following in your Terminal prompt:</p>
-<div class="highlight"><pre><span></span><code>sudo apt-get install -y software-properties-common gnupg
-wget -qO - https://qgis.org/downloads/qgis-2021.gpg.key <span class="p">|</span> sudo gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/qgis-archive.gpg --import
-sudo chmod a+r /etc/apt/trusted.gpg.d/qgis-archive.gpg
-sudo add-apt-repository <span class="s2">&quot;deb https://qgis.org/ubuntu </span><span class="k">$(</span>lsb_release -c -s<span class="k">)</span><span class="s2"> main&quot;</span>
-sudo apt-get update
-sudo apt-get install -y qgis mpich python3-pip
-pip3 install --user f90nml netCDF4
-</code></pre></div>
+<ul>
+<li><strong>Windows</strong>: Download the <strong>latest version</strong> of <strong>QGIS Standalone Installer</strong> from the <a href="https://www.qgis.org/en/site/forusers/download#windows">QGIS download page</a> and install it using the guided installation.</li>
+<li><strong>macOS</strong>: Download the <strong>latest version</strong> of <strong>QGIS macOS Installer</strong> from the <a href="https://qgis.org/en/site/forusers/download.html#mac">QGIS download page</a> and install it using the guided installation.</li>
+<li><strong>Linux</strong>:  Download and install the <strong>latest version</strong> of QGIS for Linux from the <a href="https://qgis.org/en/site/forusers/download.html#linux">QGIS download page</a>.</li>
+</ul>
 <p>After you have successfully installed QGIS 3, go to <a href="#install-gis4wrf">Install GIS4WRF</a>.</p>
 <h2 id="install-gis4wrf">Install GIS4WRF<a class="headerlink" href="#install-gis4wrf" title="Permanent link">&para;</a></h2>
 <p>The installation of GIS4WRF is straightforward and can be done directly in QGIS under the <code>Plugins</code> &gt; <code>Manage and Install Plugins...</code> menu. If you want to know how to download pre-built binaries for WPS and WRF so that you can run simulations on Windows, macOS and Linux, see the <a href="../configuration">Configuration</a> section. To learn how to use GIS4WRF see the <a href="../documentation/overview">Documentation</a> or <a href="../tutorials">Tutorials</a> section.</p>
